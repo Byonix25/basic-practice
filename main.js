@@ -21,7 +21,9 @@ document.getElementById("convert_button").addEventListener("click", function () 
 });
 
 document.getElementById("input_currency").addEventListener("keydown", function () {
-    console.log(event.keyCode);
+    if (document.getElementById("input_currency").value.includes(".") && event.keyCode == 190) {
+        event.preventDefault();
+    }
     if (event.keyCode != 8 
         && event.keyCode != 190 
         && event.keyCode != 37 
