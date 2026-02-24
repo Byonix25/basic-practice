@@ -20,7 +20,7 @@ document.getElementById("convert_button").addEventListener("click", function () 
     document.getElementById("output_currency").innerHTML = result.toFixed(2) + " " + output.value;
 });
 
-document.getElementById("input_currency").addEventListener("keydown", function () {
+document.getElementById("input_currency").addEventListener("keydown", function (event) {
     if (document.getElementById("input_currency").value.includes(".") && event.keyCode == 190) {
         event.preventDefault();
     }
